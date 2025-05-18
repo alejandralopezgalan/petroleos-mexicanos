@@ -1,4 +1,4 @@
-# petroleos-mexicanos
+# Petróleos Mexicanos
 Data analysis project exploring insights and trends in Mexico's petroleum industry
 
 <img src="assets/img/project4-oil.jpg" width="500" height="600"/>
