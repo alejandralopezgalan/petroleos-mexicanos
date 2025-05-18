@@ -45,26 +45,25 @@ For this project, the datasets were downloaded from the [Plataforma Nacional de 
 
 To gather relevant data, I searched for the term "petróleo", which returned over 90 results, including datasets and official documents published by **PEMEX (Petróleos Mexicanos), SENER (Secretaría de Energía), INEGI (INstituto Nacional de Estadística y Geografía)** other Mexican government institutions.
 
-For this project’s scope, I selected **15 datasets**, all related to Mexico’s petroleum, gas, and oil industry. You can access the original datasets through [this Github repository](https://github.com/alejandralopezgalan/petroleos-mexicanos/tree/main/assets/datasets/raw) and [this Google Drive Folder](https://drive.google.com/drive/folders/1Ht727_UwEuUORxWzpP4smzny2tHzYurv?usp=sharing).
+For this project’s scope, I selected **14 datasets**, all related to Mexico’s petroleum, gas, and oil industry. You can access the original datasets through [this Github repository](https://github.com/alejandralopezgalan/petroleos-mexicanos/tree/main/assets/datasets/raw) and [this Google Drive Folder](https://drive.google.com/drive/folders/1Ht727_UwEuUORxWzpP4smzny2tHzYurv?usp=sharing).
 
 A quick description of each dataset is here:
 | File | Description | 
 | :--- | :--- |
 | `SENER_05_ComercioExteriorGasNaturalImportacionExportacion-PMXE1C12_data.csv` | External trade of natural gas, measured by volume (millions of cubic feet per day) and value (millions of US dollars). Monthly data from January 2010 to February 2023. | 
 | `SENER_05_ElaboracionProductosPetroliferos-PMXD1C01_data.csv` | Production of petroleum products by type of product, in thousands of barrels per day. Monthly data from January 2010 to February 2023. | 
-| `SENER_05_ElaboracionProductosPetroquimicosDerivadosMetano-PMXD2C01_data.csv` | Production of petroleum products by type of product, in thousands of tons per Day. Monthly data from January 2010 to February 2023 | 
-| `SENER_05_PerforacionPozosPorRegion-PMXAC02 _data.csv` | Number of  | 
-| `` |  | 
-| `` |  | 
-| `` |  | 
-| `` |  | 
-| `` |  | 
-| `` |  | 
-| `` |  | 
-| `` |  | 
-| `` |  | 
-| `` |  | 
-| `` |  | 
+| `SENER_05_ElaboracionProductosPetroquimicosDerivadosMetano-PMXD2C01_data.csv` | Production of petroleum products by type of product, in thousands of tons per Day. Monthly data from January 2010 to February 2023. | 
+| `SENER_05_PerforacionPozosPorRegion-PMXAC02 _data.csv` | Number of oil well drillings. Monthly data from January 2010 to February 2023. | 
+| `SENER_05_ProduccionPetroleoCrudoPorActivosRegion-PMXB1C05_data.csv` | Production of crude oil by region, in thousands of barrels per day. Monthly data from January 2010 to February 2023. | 
+| `SENER_05_ProduccionPetroleoCrudoPorEntidadFederativa-PMXB1C02 _data.csv` |  Production of crude oil by State, in thousands of barrels per day. Monthly data from January 2010 to February 2023. | 
+| `SENER_05_ValorComercioIntTipoDeHidrocarburosSusDerivados-PMXF4C02_data.csv` | Value of imports and exports of petroleum products, in millions of US dollars. Monthly data from January 2010 to February 2023. | 
+| `SENER_05_ValorExportacionesPetroleoCrudoPorDestinoGeografico-PMXF1C02 _data.csv` | Value of exports of petroleum products by geogeaphical destination, in millions of US dollars. Monthly data from January 2010 to February 2023. | 
+| `SENER_05_VolumenImportacionPorTipoPetroliferos-PMXE2C15_data.csv` | Volume of importations os some petroleum products, in thousands of barrels per day. Monthly data from January 2010 to February 2023.  | 
+| `SENER_05_VolumenVentasPorTipoPetroliferos-PMXE2C01_data.csv` | Volume of selling some petroleum products, in thousands of barrels per day. Monthly data from January 2010 to February 2023. | 
+| `Historico_Precios_Expendios_2023.csv` | Daily selling price by authorised sellers in 2023 | 
+| `Historico_Precios_Expendios_2024.csv` | Daily selling price by authorised sellers in 2024 | 
+| `Historico_Precios_Expendios_2025.csv` | Daily selling price by authorised sellers in 2025 | 
+
 
 
 ### Tools
