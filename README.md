@@ -47,7 +47,7 @@ To gather relevant data, I searched for the term "petróleo", which returned ove
 
 For this project’s scope, I selected **14 datasets**, all related to Mexico’s petroleum, gas, and oil industry. You can access the original datasets through [this Github repository](https://github.com/alejandralopezgalan/petroleos-mexicanos/tree/main/assets/datasets/raw) and [this Google Drive Folder](https://drive.google.com/drive/folders/1Ht727_UwEuUORxWzpP4smzny2tHzYurv?usp=sharing).
 
-A brief description of each dataset is provided below. Most of the data was recorded monthly from January 2010 to February 2023
+A brief description of each dataset is provided below. Most of the data was recorded monthly from January 2010 to February 2023.
 | File | Description | 
 | :--- | :--- |
 | `SENER_05_ComercioExteriorGasNaturalImportacionExportacion-PMXE1C12_data.csv` | External trade of natural gas, measured by volume (in millions of cubic feet per day) and value (in millions of US dollars). | 
