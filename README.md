@@ -68,7 +68,9 @@ A brief description of each dataset is provided below. Most of the data was reco
 
 
 ### Tools
-- Excel: Used for exploring, cleaning, analysing, and visualising the data through a dashboard.
+- Excel: Used for initial exploring, cleaning, and formatting the data.
+- Microsoft SQL Server: used for data analysis.
+- Power BI: To built a dashboard.
 
 
 ### Data Cleaning and Transformation
