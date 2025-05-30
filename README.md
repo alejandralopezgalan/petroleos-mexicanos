@@ -74,7 +74,17 @@ A brief description of each dataset is provided below. Most of the data was reco
 
 
 ### Data Cleaning and Transformation
+#### Standarising Dates in Excel
+In the initial data exploration, I found that in all the datasets there was a Date column with values like ene-05, Feb-05, Mar-05, abr-05. When converting them to a Date format in Excel, some cells were recognised correctly, but others were not. After reviewing the data, I realised that these values were monthly dates. To ensure consistency and prevent errors, I turned to the EDATE function in Excel.
 
+Here’s how it works:
+`EDATE(start_date, months)` shifts a date forward or backwards by a specified number of months. Since I needed all dates to follow a consistent format, such as 01/01/2010, 01/02/2010, 01/03/2010, I applied the formula:
+`=EDATE(A2, 1)`
+
+This helped standardise the datasets while adding one month to each value. I applied this transformation to the following datasets: `SENER_05_ComercioExteriorGasNaturalImportacionExportacion-PMXE1C12_data.csv`, `SENER_05_ElaboracionProductosPetroliferos-PMXD1C01_data.csv`, `SENER_05_ElaboracionProductosPetroquimicosDerivadosMetano-PMXD2C01.csv`, `SENER_05_ImportacionesGasLicuadoPropanoButanoPuntoInternacion-PMXE2C12`, `SENER_05_PerforacionPozosPorRegion-PMXAC02.csv`, `SENER_05_ProduccionPetroleoCrudoPorActivosRegion-PMXB1C05.csv`, `SENER_05_ProduccionPetroleoCrudoPorEntidadFederativa-PMXB1C02`, `SENER_05_ValorComercioIntTipoDeHidrocarburosSusDerivados-PMXF4C02.csv`, `SENER_05_ValorExportacionesPetroleoCrudoPorDestinoGeografico-PMXF1C02.csv`, `SENER_05_VolumenImportacionPorTipoPetroliferos-PMXE2C15.csv`, `SENER_05_VolumenVentasPorTipoPetroliferos-PMXE2C01.csv`. 
+
+#### SQL
+In Microsoft SQL Server Management Studio I created the database `pemex_db`
 
 ### Data Analysis
 
