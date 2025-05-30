@@ -74,8 +74,20 @@ A brief description of each dataset is provided below. Most of the data was reco
 
 
 ### Data Cleaning and Transformation
-#### Standarising Dates in Excel
-In the initial data exploration, I found that in all the datasets there was a Date column with values like ene-05, Feb-05, Mar-05, abr-05. When converting them to a Date format in Excel, some cells were recognised correctly, but others were not. After reviewing the data, I realised that these values were monthly dates. To ensure consistency and prevent errors, I turned to the EDATE function in Excel.
+#### Initial Data Transformation in Excel
+In the initial data exploration, I found that in all the datasets were in horizontal format as seen in the following image. Therefore, the first step was switching rows into columns and columns into rows using the TRANSPOSE function in Excel.
+
+![view_originaldata](assets/img/project4_1originaldata.png)
+
+![traspose](assets/img/project4_2traspose.png)
+
+The resulting table had some columns with zeros o missing values; nonetheless, these were not originally missing data, rather the result of trasposing the table; therefore, the table was copied into a new sheet, to remove unncesseary columns, rename useful columns, and get a table with the correct information from the original dataset. 
+
+
+![traspose](assets/img/project4_3table.png)
+
+
+there was a Date column with values like ene-05, Feb-05, Mar-05, abr-05. When converting them to a Date format in Excel, some cells were recognised correctly, but others were not. After reviewing the data, I realised that these values were monthly dates. To ensure consistency and prevent errors, I turned to the EDATE function in Excel.
 
 Here’s how it works:
 `EDATE(start_date, months)` shifts a date forward or backwards by a specified number of months. Since I needed all dates to follow a consistent format, such as 01/01/2010, 01/02/2010, 01/03/2010, I applied the formula:
