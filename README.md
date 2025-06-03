@@ -66,7 +66,6 @@ A brief description of each dataset is provided below. Most of the data was reco
 | `Historico_Precios_Expendios_2025.csv` | Daily retail price of petroleum products by authorised sellers in 2025. | 
 
 
-
 ### Tools
 - Excel: Used for initial exploring, cleaning, and formatting the data.
 - Microsoft SQL Server: used for data analysis.
