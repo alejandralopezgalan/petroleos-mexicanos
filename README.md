@@ -82,16 +82,14 @@ In the initial data exploration, I found that in all the datasets were in horizo
 
 The resulting table had some columns with zeros o missing values; nonetheless, these were not originally missing data, rather the result of trasposing the table. In some cases the original table had a N/D in some observations, which mean that no records or no data was available. Using Excel, all N/D observations were replaced with zeros. 
 
-<img src="assets/img/project4_3replaceND.png" width="655" height="381"/>
+![nd](assets/img/project4_3replaceND.png)
 
 Finally, the table was copied into a new sheet, to remove unncesseary columns, rename useful columns, and get the correct information from the original dataset. 
 
 <img src="assets/img/project4_3table.png" width="400" height="400"/>
 
-
-
-
 The data was imported into a new Excel woorkbook and exported as a CSV file to be used in SQL.
+
 
 there was a Date column with values like ene-05, Feb-05, Mar-05, abr-05. When converting them to a Date format in Excel, some cells were recognised correctly, but others were not. After reviewing the data, I realised that these values were monthly dates. To ensure consistency and prevent errors, I turned to the EDATE function in Excel.
 
