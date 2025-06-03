@@ -99,7 +99,7 @@ All these changes were saved in Excel files separated from the original data.
 Finally, the table was copied into a new workbook and then exported as a CSV file to be used for the data analysis in SQL. The name of the files were shortened for an easier selection of the datasets to be imported into SQL Server.
 
 | Original File | Excel file with Data Cleaning Operations  | CSV file used for SQL |
-| :--- | :--- |
+| :--- | :--- |  :--- |
 | `SENER_05_ComercioExteriorGasNaturalImportacionExportacion-PMXE1C12_data.csv` | ESENER_05_ComercioExteriorGasNaturalImportacionExportacion-PMXE1C12_EXCEL.xlsx | ComercioExteriorGasNatural.csv |
 | `SENER_05_ElaboracionProductosPetroliferos-PMXD1C01_data.csv` | SENER_05_ElaboracionProductosPetroliferos-PMXD1C01_EXCEL.xlsx  | .csv | 
 | `SENER_05_ElaboracionProductosPetroquimicosDerivadosMetano-PMXD2C01_data.csv` | .xlsx | .csv | 
