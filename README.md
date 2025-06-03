@@ -82,7 +82,7 @@ In the initial data exploration, I found that in all the datasets were in horizo
 
 The resulting table had some columns with zeros o missing values; nonetheless, these were not originally missing data, rather the result of trasposing the table. In some cases the original table had a N/D in some observations, which mean that no records or no data was available. Using Excel, all N/D observations were replaced with zeros. 
 
-<img src="assets/img/project4_3replaceND.png" width="400" height="200"/>
+<img src="assets/img/project4_3replaceND.png" width="555" height="281"/>
 
 Finally, the table was copied into a new sheet, to remove unncesseary columns, rename useful columns, and get the correct information from the original dataset. 
 
