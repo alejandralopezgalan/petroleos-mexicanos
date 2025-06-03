@@ -17,7 +17,7 @@ Image from [freepik](https://www.freepik.com/free-vector/offshore-oil-rig-raw-ma
 - [Methodology](#methodology)
   - [Data Source](#data-source)
   - [Tools](#tools)
-  - [Data Cleaning and Transformation](#data-cleaning-and-transformation)
+  - [Initial Data Transformation and Cleaning in Excel](#initial-data-transformation-and-cleaning-in-excel)
   - [Data Analysis](#data-analysis)
   - [Data Visualisation](#data-visualisation)
 - [Insights](#insights)
@@ -74,16 +74,22 @@ A brief description of each dataset is provided below. Most of the data is recor
 
 
 ### Data Cleaning and Transformation
-#### Initial Data Transformation in Excel
+#### Initial Data Transformation and Cleaning in Excel
+
+***1. Trasposing the table***
 In the initial data exploration, I found that in all the datasets were in horizontal format as seen in the following image. Therefore, the first step was switching rows into columns and columns into rows using the TRANSPOSE function in Excel.
 
 ![view_originaldata](assets/img/project4_1originaldata.png)
 
 ![traspose](assets/img/project4_2traspose.png)
 
-The resulting table had some columns with zeros o missing values; nonetheless, these were not originally missing data, rather the result of trasposing the table. In some cases the original table had a N/D in some observations, which mean that no records or no data was available. Using Excel, all N/D observations were replaced with zeros. 
+***2. Replacing No Data (N/D) with zeros***
+The resulting table had some columns with zeros o missing values; however, these were not originally missing data, rather the result of trasposing the table. In some cases the original table had a N/D in some observations, which mean that no records or no data was available. Using Excel, all N/D observations were replaced with zeros. 
 
 ![nd](assets/img/project4_3replaceND.png)
+
+***3. Removing columns that only contain zeros or duplicated values***
+Using Conditional Formatting in Excel, the cells with duplicated values were highlighted. In cases were all observations were  
 
 Finally, the table was copied into a new sheet, to remove unncesseary columns, rename useful columns, and get the correct information from the original dataset. 
 
