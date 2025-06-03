@@ -157,7 +157,12 @@ FROM ComercioExteriorGasNatural;
 
 ### Data Analysis
 
-After standarising the dates, a new variable `Año` was created to get the Year of each date, then the net exports of natural gas weere calculated in terms of value and volume using the following SQL code.
+After standarising the dates, a new variable `Año` was created to get the Year of each date Then the net exports (`volumen_neto_exportaciones`) and the trade balance (`balanza_comercial`) of natural gas were calculated. In case `balanza_comercial` or `volumen_neto_exportaciones` were positive, SQL will print `Superávit` (surplus), otherwise `Déficit` (Deficit). `Superávit` refers to a trade surplus, which occurs when a the natural gas exports exceed its imports, whereas `Déficit` means that Mexico's natural gas imports exceed its exports, resulting in a negative trade balance.
+
+| Measure | Description |
+| :--- |:--- | 
+| volumen_neto_exportaciones | Net exportations. Volume exportations minus volume importations of natural gas in millions of cubic feet per day. |  
+| balanza_comercial | Trade balance. Value exportations minus value importations of natural gas in millions of US dollars.|  
 
 **SQL code** 
 ```sql 
@@ -189,6 +194,8 @@ SELECT
 FROM ComercioExteriorGasNatural
 GROUP BY Año;
  ```
+
+After that the net exports of natural gas weere calculated in terms of value and volume using the following SQL code.
 
 
 
