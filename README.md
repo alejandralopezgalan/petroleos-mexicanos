@@ -199,12 +199,13 @@ After that the net exports of natural gas weere calculated in terms of value and
 
 
 
+
 ### Data Visualisation
 
 
 
 ## Insights
-
+From 2010 to 2023 Mexico had a commercial natural gas deficit, from -559.57 to -23,180.58 for volume of natural gas in millions of cubic feet per day; meanwhile, for value of natural gas in millions of US dollars the déficit range from -72.81 to 2,814.44
 
 ## Action plan
 
