@@ -76,24 +76,47 @@ A brief description of each dataset is provided below. Most of the data is recor
 ### Data Cleaning and Transformation
 #### Initial Data Transformation and Cleaning in Excel
 
-***1. Trasposing the table***
+**1. Trasposing the table**  
 In the initial data exploration, I found that in all the datasets were in horizontal format as seen in the following image. Therefore, the first step was switching rows into columns and columns into rows using the TRANSPOSE function in Excel.
 
 ![view_originaldata](assets/img/project4_1originaldata.png)
 
 ![traspose](assets/img/project4_2traspose.png)
 
-***2. Replacing No Data (N/D) with zeros***
-The resulting table had some columns with zeros o missing values; however, these were not originally missing data, rather the result of trasposing the table. In some cases the original table had a N/D in some observations, which mean that no records or no data was available. Using Excel, all N/D observations were replaced with zeros. 
+**2. Removing columns and replacing No Data (N/D) with zeros**  
+The resulting table was copied into a new sheet to start the data cleaning steps. First, some columns had zeros o missing values; however, these were not originally missing data, rather the result of trasposing the table. These columns were removed.
+In other cases the original table had N/D in some observations, which mean that no records or no data was available. Using Excel, all N/D observations were replaced with zeros. 
 
 ![nd](assets/img/project4_3replaceND.png)
 
-***3. Removing columns that only contain zeros or duplicated values***
-Using Conditional Formatting in Excel, the cells with duplicated values were highlighted. In cases were all observations were  
+**3. Removing columns with only duplicated values**  
+Using Conditional Formatting in Excel, the cells with duplicated values were highlighted. In cases were all observations were highlited as duplicates, the columns were removed.
+![duplicates](assets/img/project4_4duplicates.png)
 
-Finally, the table was copied into a new sheet, to remove unncesseary columns, rename useful columns, and get the correct information from the original dataset. 
+All these changes were saved in Excel files separated from the original data.
 
-<img src="assets/img/project4_3table.png" width="400" height="400"/>
+**4. Exporting the final table into a new CSV file**  
+Finally, the table was copied into a new workbook and then exported as a CSV file to be used for the data analysis in SQL. The name of the files were shortened for an easier selection of the datasets to be imported into SQL Server.
+
+| Original File | Excel file with Data Cleaning Operations  | CSV file used for SQL |
+| :--- | :--- |
+| `SENER_05_ComercioExteriorGasNaturalImportacionExportacion-PMXE1C12_data.csv` | ESENER_05_ComercioExteriorGasNaturalImportacionExportacion-PMXE1C12_EXCEL.xlsx | ComercioExteriorGasNatural.csv |
+| `SENER_05_ElaboracionProductosPetroliferos-PMXD1C01_data.csv` | SENER_05_ElaboracionProductosPetroliferos-PMXD1C01_EXCEL.xlsx  | .csv | 
+| `SENER_05_ElaboracionProductosPetroquimicosDerivadosMetano-PMXD2C01_data.csv` | .xlsx | .csv | 
+| `SENER_05_ImportacionesGasLicuadoPropanoButanoPuntoInternacion-PMXE2C12_data` | .xlsx | .csv |
+| `SENER_05_PerforacionPozosPorRegion-PMXAC02_data.csv` | .xlsx | .csv |
+| `SENER_05_ProduccionPetroleoCrudoPorActivosRegion-PMXB1C05_data.csv` | .xlsx | .csv |
+| `SENER_05_ProduccionPetroleoCrudoPorEntidadFederativa-PMXB1C02_data.csv` | .xlsx | .csv |
+| `SENER_05_ValorComercioIntTipoDeHidrocarburosSusDerivados-PMXF4C02_data.csv` | .xlsx | .csv |
+| `SENER_05_ValorExportacionesPetroleoCrudoPorDestinoGeografico-PMXF1C02_data.csv` |.xlsx | .csv | 
+| `SENER_05_VolumenImportacionPorTipoPetroliferos-PMXE2C15_data.csv` | .xlsx | .csv | 
+| `SENER_05_VolumenVentasPorTipoPetroliferos-PMXE2C01_data.csv` | .xlsx | .csv | 
+| `Historico_Precios_Expendios_2023.csv` | .xlsx | .csv |
+| `Historico_Precios_Expendios_2024.csv` | .xlsx | .csv | 
+| `Historico_Precios_Expendios_2025.csv` | .xlsx | .csv | 
+
+
+<img src="assets/img/project4_5table.png" width="400" height="400"/>
 
 The data was imported into a new Excel woorkbook and exported as a CSV file to be used in SQL.
 
