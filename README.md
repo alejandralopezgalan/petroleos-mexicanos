@@ -101,7 +101,7 @@ Finally, the table was copied into a new workbook and then exported as a CSV fil
 | Original File | Excel file with Data Cleaning Operations  | CSV file used for SQL |
 | :--- | :--- |  :--- |
 | `SENER_05_ComercioExteriorGasNaturalImportacionExportacion-PMXE1C12_data.csv` | ESENER_05_ComercioExteriorGasNaturalImportacionExportacion-PMXE1C12_EXCEL.xlsx | ComercioExteriorGasNatural.csv |
-| `SENER_05_ElaboracionProductosPetroliferos-PMXD1C01_data.csv` | SENER_05_ElaboracionProductosPetroliferos-PMXD1C01_EXCEL.xlsx  | .csv | 
+| `SENER_05_ElaboracionProductosPetroliferos-PMXD1C01_data.csv` | SENER_05_ElaboracionProductosPetroliferos-PMXD1C01_EXCEL.xlsx  | ElaboracionProductosPetroliferos.csv | 
 | `SENER_05_ElaboracionProductosPetroquimicosDerivadosMetano-PMXD2C01_data.csv` | .xlsx | .csv | 
 | `SENER_05_ImportacionesGasLicuadoPropanoButanoPuntoInternacion-PMXE2C12_data` | .xlsx | .csv |
 | `SENER_05_PerforacionPozosPorRegion-PMXAC02_data.csv` | .xlsx | .csv |
@@ -115,8 +115,6 @@ Finally, the table was copied into a new workbook and then exported as a CSV fil
 | `Historico_Precios_Expendios_2024.csv` | .xlsx | .csv | 
 | `Historico_Precios_Expendios_2025.csv` | .xlsx | .csv | 
 
-
-<img src="assets/img/project4_5table.png" width="400" height="400"/>
 
 The data was imported into a new Excel woorkbook and exported as a CSV file to be used in SQL.
 
