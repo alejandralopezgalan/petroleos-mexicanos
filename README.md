@@ -97,10 +97,98 @@ Here’s how it works:
 This helped standardise the datasets while adding one month to each value. I applied this transformation to the following datasets: `SENER_05_ComercioExteriorGasNaturalImportacionExportacion-PMXE1C12_data.csv`, `SENER_05_ElaboracionProductosPetroliferos-PMXD1C01_data.csv`, `SENER_05_ElaboracionProductosPetroquimicosDerivadosMetano-PMXD2C01.csv`, `SENER_05_ImportacionesGasLicuadoPropanoButanoPuntoInternacion-PMXE2C12`, `SENER_05_PerforacionPozosPorRegion-PMXAC02.csv`, `SENER_05_ProduccionPetroleoCrudoPorActivosRegion-PMXB1C05.csv`, `SENER_05_ProduccionPetroleoCrudoPorEntidadFederativa-PMXB1C02`, `SENER_05_ValorComercioIntTipoDeHidrocarburosSusDerivados-PMXF4C02.csv`, `SENER_05_ValorExportacionesPetroleoCrudoPorDestinoGeografico-PMXF1C02.csv`, `SENER_05_VolumenImportacionPorTipoPetroliferos-PMXE2C15.csv`, `SENER_05_VolumenVentasPorTipoPetroliferos-PMXE2C01.csv`. 
 
 #### SQL
-In Microsoft SQL Server Management Studio I created the database `pemex_db`
+In Microsoft SQL Server Management Studio I created the database `pemex_db`, then I imported the file `ComercioExteriorGasNatural.csv` into the database. The first data transformation was to standarise the Dates. This file contained Dates in format "Ene/2010, Feb/2010, Mar/2010", etc. Therefore in SQL we used a conditional expression to create a new variable and transform the date to a 'dd-MM-yyyy' format.
+
+**SQL code** 
+```sql  
+-- Create the pemex_db database to be used
+CREATE DATABASE pemex_db;
+USE pemex_db;
+
+/*---------------------------
+ComercioExteriorGasNatural
+------------------------------
+*/
+-- Select the first 20 rows for initial observation
+SELECT TOP 20 *
+FROM ComercioExteriorGasNatural;
+
+-- Add a new variable (FechaCompleta) to modify the date column
+ALTER TABLE ComercioExteriorGasNatural
+ADD FechaCompleta DATE;
+
+/*The following query converts the dates from 'Fechas'
+from Ene/2010, Feb/2010, and so on to
+2010-01-01, 2010-02-2010, and so on
+*/
+UPDATE ComercioExteriorGasNatural
+SET FechaCompleta = FORMAT(
+	CAST('01-' +
+		CASE
+			WHEN LEFT(Fechas, 3) = 'Ene' THEN '01'
+			WHEN LEFT(Fechas, 3) = 'Feb' THEN '02'
+			WHEN LEFT(Fechas, 3) = 'Mar' THEN '03'
+			WHEN LEFT(Fechas, 3) = 'Abr' THEN '04'
+			WHEN LEFT(Fechas, 3) = 'May' THEN '05'
+			WHEN LEFT(Fechas, 3) = 'Jun' THEN '06'
+			WHEN LEFT(Fechas, 3) = 'Jul' THEN '07'
+			WHEN LEFT(Fechas, 3) = 'Ago' THEN '08'
+			WHEN LEFT(Fechas, 3) = 'Sep' THEN '09'
+			WHEN LEFT(Fechas, 3) = 'Oct' THEN '10'
+			WHEN LEFT(Fechas, 3) = 'Nov' THEN '11'
+			WHEN LEFT(Fechas, 3) = 'Dic' THEN '12'
+		END 
+		+ '-' + 
+		RIGHT(Fechas, 4)
+	AS DATE), 
+	'dd-MM-yyyy'
+);
+
+--Checking if the format is correct
+SELECT TOP 24 *, 
+DATEPART(DAY, FechaCompleta) AS DAY,
+DATEPART(MONTH, FechaCompleta) AS MONTH,
+DATEPART(YEAR, FechaCompleta) AS YEAR
+FROM ComercioExteriorGasNatural;
+```  
+
+
+
 
 ### Data Analysis
 
+After standarising the dates, a new variable `Año` was created to get the Year of each date, then the net exports of natural gas weere calculated in terms of value and volume using the following SQL code.
+
+**SQL code** 
+```sql 
+--Calculating the net exports (volume and value) by month and year
+SELECT
+	ROUND(volumen_exportación - volumen_importación, 2) AS volumen_neto_exportación,
+	ROUND(valor_exportación - valor_importación, 2) AS valor_neto_importación,
+	FechaCompleta
+FROM ComercioExteriorGasNatural;
+
+/*Calculating the volume net exports by year.
+If positive then Superávit, if negative then Déficit
+Otherwise equilibrio
+*/ 
+SELECT 
+	Año,
+	ROUND(SUM(volumen_exportación) - SUM(volumen_importación), 2) AS volumen_neto_exportaciones,
+	ROUND(SUM(valor_exportación) - SUM(valor_importación), 2) AS balanza_comercial,
+	CASE 
+		WHEN SUM(volumen_exportación) - SUM(volumen_importación) > 0 THEN 'Superávit'
+		WHEN SUM(volumen_exportación) - SUM(volumen_importación) < 0 THEN 'Déficit'
+		ELSE 'Equilibrio'
+	END AS volumen_comercial,
+	CASE 
+		WHEN SUM(valor_exportación) - SUM(valor_importación) > 0 THEN 'Superávit'
+		WHEN SUM(valor_exportación) - SUM(valor_importación) < 0 THEN 'Déficit'
+		ELSE 'Equilibrio'
+	END AS valor_comercial
+FROM ComercioExteriorGasNatural
+GROUP BY Año;
+ ```
 
 
 
