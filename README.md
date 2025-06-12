@@ -102,18 +102,18 @@ Finally, the table was copied into a new workbook and then exported as a CSV fil
 | :--- | :--- |  :--- |
 | `SENER_05_ComercioExteriorGasNaturalImportacionExportacion-PMXE1C12_data.csv` | ESENER_05_ComercioExteriorGasNaturalImportacionExportacion-PMXE1C12_EXCEL.xlsx | ComercioExteriorGasNatural.csv |
 | `SENER_05_ElaboracionProductosPetroliferos-PMXD1C01_data.csv` | SENER_05_ElaboracionProductosPetroliferos-PMXD1C01_EXCEL.xlsx  | ElaboracionProductosPetroliferos.csv | 
-| `SENER_05_ElaboracionProductosPetroquimicosDerivadosMetano-PMXD2C01_data.csv` | .xlsx | .csv | 
-| `SENER_05_ImportacionesGasLicuadoPropanoButanoPuntoInternacion-PMXE2C12_data` | .xlsx | .csv |
-| `SENER_05_PerforacionPozosPorRegion-PMXAC02_data.csv` | .xlsx | .csv |
-| `SENER_05_ProduccionPetroleoCrudoPorActivosRegion-PMXB1C05_data.csv` | .xlsx | .csv |
-| `SENER_05_ProduccionPetroleoCrudoPorEntidadFederativa-PMXB1C02_data.csv` | .xlsx | .csv |
-| `SENER_05_ValorComercioIntTipoDeHidrocarburosSusDerivados-PMXF4C02_data.csv` | .xlsx | .csv |
-| `SENER_05_ValorExportacionesPetroleoCrudoPorDestinoGeografico-PMXF1C02_data.csv` |.xlsx | .csv | 
-| `SENER_05_VolumenImportacionPorTipoPetroliferos-PMXE2C15_data.csv` | .xlsx | .csv | 
-| `SENER_05_VolumenVentasPorTipoPetroliferos-PMXE2C01_data.csv` | .xlsx | .csv | 
-| `Historico_Precios_Expendios_2023.csv` | .xlsx | .csv |
-| `Historico_Precios_Expendios_2024.csv` | .xlsx | .csv | 
-| `Historico_Precios_Expendios_2025.csv` | .xlsx | .csv | 
+| `SENER_05_ElaboracionProductosPetroquimicosDerivadosMetano-PMXD2C01_data.csv` | SENER_05_ElaboracionProductosPetroquimicosDerivadosMetano-PMXD2C01_EXCEL.xlsx | .csv | 
+| `SENER_05_ImportacionesGasLicuadoPropanoButanoPuntoInternacion-PMXE2C12_data` | SENER_05_ImportacionesGasLicuadoPropanoButanoPuntoInternacion-PMXE2C12_EXCEL.xlsx | .csv |
+| `SENER_05_PerforacionPozosPorRegion-PMXAC02_data.csv` | SENER_05_PerforacionPozosPorRegion-PMXAC02_EXCEL.xlsx | .csv |
+| `SENER_05_ProduccionPetroleoCrudoPorActivosRegion-PMXB1C05_data.csv` | SENER_05_ProduccionPetroleoCrudoPorActivosRegion-PMXB1C05_EXCEL.xlsx | .csv |
+| `SENER_05_ProduccionPetroleoCrudoPorEntidadFederativa-PMXB1C02_data.csv` | SENER_05_ProduccionPetroleoCrudoPorEntidadFederativa-PMXB1C02_EXCEL.xlsx | .csv |
+| `SENER_05_ValorComercioIntTipoDeHidrocarburosSusDerivados-PMXF4C02_data.csv` | SENER_05_ValorComercioIntTipoDeHidrocarburosSusDerivados-PMXF4C02_EXCEL.xlsx | .csv |
+| `SENER_05_ValorExportacionesPetroleoCrudoPorDestinoGeografico-PMXF1C02_data.csv` | SENER_05_ValorExportacionesPetroleoCrudoPorDestinoGeografico-PMXF1C02_EXCEL.xlsx | .csv | 
+| `SENER_05_VolumenImportacionPorTipoPetroliferos-PMXE2C15_data.csv` | SENER_05_VolumenImportacionPorTipoPetroliferos-PMXE2C15_EXCEL.xlsx | .csv | 
+| `SENER_05_VolumenVentasPorTipoPetroliferos-PMXE2C01_data.csv` | SENER_05_VolumenVentasPorTipoPetroliferos-PMXE2C01_EXCEL.xlsx | .csv | 
+| `Historico_Precios_Expendios_2023.csv` | Historico_Precios_Expendios_2023EXCEL.xlsx | .csv |
+| `Historico_Precios_Expendios_2024.csv` | Historico_Precios_Expendios_2024EXCEL.xlsx | .csv | 
+| `Historico_Precios_Expendios_2025.csv` | Historico_Precios_Expendios_2025EXCEL.xlsx | .csv | 
 
 
 The data was imported into a new Excel woorkbook and exported as a CSV file to be used in SQL.
