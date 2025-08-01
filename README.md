@@ -51,17 +51,17 @@ A brief description of each dataset is provided below. Most of the data is recor
 
 | File | Description | 
 | :--- | :--- |
-| `SENER_05_ComercioExteriorGasNaturalImportacionExportacion-PMXE1C12_data.csv` | External trade of natural gas, reported by volume (millions of cubic feet per day) and value (millions of US dollars).| 
-| `SENER_05_ElaboracionProductosPetroliferos-PMXD1C01_data.csv` | Production of petroleum products by category, measured in thousands of barrels per day.| 
-| `SENER_05_ElaboracionProductosPetroquimicosDerivadosMetano-PMXD2C01_data.csv` | Production of petrochemical products derived from methane, measured in thousands of tons per day.| 
-| `SENER_05_ImportacionesGasLicuadoPropanoButanoPuntoInternacion-PMXE2C12_data` | Import volumes of liquefied gas, propane, and butane by point of entry, measured in thousands of barrels per day.| 
-| `SENER_05_PerforacionPozosPorRegion-PMXAC02_data.csv` | Number of oil wells drilled, broken down by region.| 
-| `SENER_05_ProduccionPetroleoCrudoPorActivosRegion-PMXB1C05_data.csv` | Crude oil production by operational region, measured in thousands of barrels per day.| 
-| `SENER_05_ProduccionPetroleoCrudoPorEntidadFederativa-PMXB1C02_data.csv` |  Crude oil production by state, measured in thousands of barrels per day.| 
-| `SENER_05_ValorComercioIntTipoDeHidrocarburosSusDerivados-PMXF4C02_data.csv` | Monetary value of imports and exports of hydrocarbons and their derivatives, reported in millions of US dollars.| 
-| `SENER_05_ValorExportacionesPetroleoCrudoPorDestinoGeografico-PMXF1C02_data.csv` | Export value of crude oil by geographic destination, measured in millions of US dollars.| 
-| `SENER_05_VolumenImportacionPorTipoPetroliferos-PMXE2C15_data.csv` | Import volume of specific petroleum products, measured in thousands of barrels per day.| 
-| `SENER_05_VolumenVentasPorTipoPetroliferos-PMXE2C01_data.csv` | Sales volume of petroleum products by type, measured in thousands of barrels per day.| 
+| `ComercioExteriorGasNaturalImportacionExportacion_data.csv` | External trade of natural gas, reported by volume (millions of cubic feet per day) and value (millions of US dollars).| 
+| `ElaboracionProductosPetroliferos_data.csv` | Production of petroleum products by category, measured in thousands of barrels per day.| 
+| `ElaboracionProductosPetroquimicosDerivadosMetano_data.csv` | Production of petrochemical products derived from methane, measured in thousands of tons per day.| 
+| `ImportacionesGasLicuadoPropanoButanoPuntoInternacion_data` | Import volumes of liquefied gas, propane, and butane by point of entry, measured in thousands of barrels per day.| 
+| `PerforacionPozosPorRegion_data.csv` | Number of oil wells drilled, broken down by region.| 
+| `ProduccionPetroleoCrudoPorActivosRegion_data.csv` | Crude oil production by operational region, measured in thousands of barrels per day.| 
+| `ProduccionPetroleoCrudoPorEntidadFederativa_data.csv` |  Crude oil production by state, measured in thousands of barrels per day.| 
+| `ValorComercioIntTipoDeHidrocarburosSusDerivados_data.csv` | Monetary value of imports and exports of hydrocarbons and their derivatives, reported in millions of US dollars.| 
+| `ValorExportacionesPetroleoCrudoPorDestinoGeografic_data.csv` | Export value of crude oil by geographic destination, measured in millions of US dollars.| 
+| `VolumenImportacionPorTipoPetroliferos_data.csv` | Import volume of specific petroleum products, measured in thousands of barrels per day.| 
+| `VolumenVentasPorTipoPetroliferos_data.csv` | Sales volume of petroleum products by type, measured in thousands of barrels per day.| 
 | `Historico_Precios_Expendios_2023.csv` | Daily retail prices of petroleum products by authorised sellers for the year 2023. | 
 | `Historico_Precios_Expendios_2024.csv` | Daily retail prices of petroleum products by authorised sellers for the year 2024. | 
 | `Historico_Precios_Expendios_2025.csv` | Daily retail prices of petroleum products by authorised sellers for the year 2025.| 
@@ -100,10 +100,10 @@ Finally, the table was copied into a new workbook and then exported as a CSV fil
 
 | Original File | Excel file with Data Cleaning Operations  | CSV file used for SQL |
 | :--- | :--- |  :--- |
-| `SENER_05_ComercioExteriorGasNaturalImportacionExportacion-PMXE1C12_data.csv` | ESENER_05_ComercioExteriorGasNaturalImportacionExportacion-PMXE1C12_EXCEL.xlsx | ComercioExteriorGasNatural.csv |
-| `SENER_05_ElaboracionProductosPetroliferos-PMXD1C01_data.csv` | SENER_05_ElaboracionProductosPetroliferos-PMXD1C01_EXCEL.xlsx  | ElaboracionProductosPetroliferos.csv | 
-| `SENER_05_ElaboracionProductosPetroquimicosDerivadosMetano-PMXD2C01_data.csv` | SENER_05_ElaboracionProductosPetroquimicosDerivadosMetano-PMXD2C01_EXCEL.xlsx | .csv | 
-| `SENER_05_ImportacionesGasLicuadoPropanoButanoPuntoInternacion-PMXE2C12_data` | SENER_05_ImportacionesGasLicuadoPropanoButanoPuntoInternacion-PMXE2C12_EXCEL.xlsx | .csv |
+| `ComercioExteriorGasNaturalImportacionExportacion-PMXE1C12.csv` | ESENER_05_ComercioExteriorGasNaturalImportacionExportacion-PMXE1C12_EXCEL.xlsx | ComercioExteriorGasNatural.csv |
+| `ElaboracionProductosPetroliferos-PMXD1C01.csv` | SENER_05_ElaboracionProductosPetroliferos-PMXD1C01_EXCEL.xlsx  | ElaboracionProductosPetroliferos.csv | 
+| `ElaboracionProductosPetroquimicosDerivadosMetano-PMXD2C01.csv` | SENER_05_ElaboracionProductosPetroquimicosDerivadosMetano-PMXD2C01_EXCEL.xlsx | .csv | 
+| `ImportacionesGasLicuadoPropanoButanoPuntoInternacion-PMXE2C10` | SENER_05_ImportacionesGasLicuadoPropanoButanoPuntoInternacion-PMXE2C12_EXCEL.xlsx | .csv |
 | `SENER_05_PerforacionPozosPorRegion-PMXAC02_data.csv` | SENER_05_PerforacionPozosPorRegion-PMXAC02_EXCEL.xlsx | .csv |
 | `SENER_05_ProduccionPetroleoCrudoPorActivosRegion-PMXB1C05_data.csv` | SENER_05_ProduccionPetroleoCrudoPorActivosRegion-PMXB1C05_EXCEL.xlsx | .csv |
 | `SENER_05_ProduccionPetroleoCrudoPorEntidadFederativa-PMXB1C02_data.csv` | SENER_05_ProduccionPetroleoCrudoPorEntidadFederativa-PMXB1C02_EXCEL.xlsx | .csv |
