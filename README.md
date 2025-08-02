@@ -110,7 +110,7 @@ Finally, the clean dataset was copied into a new workbook and then exported as a
 | `ComercioExteriorGasNatural`<br>`ImportacionExportacion_data.csv` | `ComercioExteriorGasNatural`<br>`ImportacionExportacion_Excel.xlsx` | `ComercioExteriorGasNatural`<br>`ImportacionExportacion.csv`|
 | `ElaboracionProductos`<br>`Petroliferos_data.csv` | `ElaboracionProductos`<br>`Petroliferos_Excel.xlsx`| `ElaboracionProductos`<br>`Petroliferos.csv` |
 | `ElaboracionProductosPetroquimicos`<br>`DerivadosMetano_data.csv` | `ElaboracionProductosPetroquimicos`<br>`DerivadosMetano_Excel.xlsx`| `ElaboracionProductosPetroquimicos`<br>`DerivadosMetano.csv` |
-| `ImportacionesGasLicuadoPropano`<br>`ButanoPuntoInternacion_data.csv` | `ImportacionesGasLicuadoPropano`<br>`ButanoPuntoInternacion_Excel.xlsx`| `ImportacionesGasLicuadoPropano`<br>`ButanoPuntoInternacion.csv`
+| `ImportacionesGasLicuadoPropano`<br>`ButanoPuntoInternacion_data.csv` | `ImportacionesGasLicuadoPropano`<br>`ButanoPuntoInternacion_Excel.xlsx`| `ImportacionesGasLicuadoPropano`<br>`ButanoPuntoInternacion.csv` |
 | `PerforacionPozosPorRegion_data.csv` | `PerforacionPozosPorRegion_data.csv`| `PerforacionPozosPorRegion.csv`|
 | `ProduccionPetroleoCrudo`<br>`PorActivosRegion_data.csv` | `ProduccionPetroleoCrudo`<br>`PorActivosRegion_Excel.xlsx` | `ProduccionPetroleoCrudo`<br>`PorActivosRegion.csv`|
 | `ValorComercioIntTipoDe`<br>`HidrocarburosSusDerivados_data.csv` | `ValorComercioIntTipoDe`<br>`HidrocarburosSusDerivados_Excel.xlsx` | `ValorComercioIntTipoDe`<br>`HidrocarburosSusDerivados.csv`|
@@ -147,18 +147,18 @@ UPDATE ComercioExteriorGasNatural
 SET FechaCompleta = FORMAT(
 	CAST('01-' +
 		CASE
-			WHEN LEFT(Fechas, 3) = 'Ene' THEN '01'
-			WHEN LEFT(Fechas, 3) = 'Feb' THEN '02'
-			WHEN LEFT(Fechas, 3) = 'Mar' THEN '03'
-			WHEN LEFT(Fechas, 3) = 'Abr' THEN '04'
-			WHEN LEFT(Fechas, 3) = 'May' THEN '05'
-			WHEN LEFT(Fechas, 3) = 'Jun' THEN '06'
-			WHEN LEFT(Fechas, 3) = 'Jul' THEN '07'
-			WHEN LEFT(Fechas, 3) = 'Ago' THEN '08'
-			WHEN LEFT(Fechas, 3) = 'Sep' THEN '09'
-			WHEN LEFT(Fechas, 3) = 'Oct' THEN '10'
-			WHEN LEFT(Fechas, 3) = 'Nov' THEN '11'
-			WHEN LEFT(Fechas, 3) = 'Dic' THEN '12'
+			WHEN LEFT(Fecha, 3) = 'Ene' THEN '01'
+			WHEN LEFT(Fecha, 3) = 'Feb' THEN '02'
+			WHEN LEFT(Fecha, 3) = 'Mar' THEN '03'
+			WHEN LEFT(Fecha, 3) = 'Abr' THEN '04'
+			WHEN LEFT(Fecha, 3) = 'May' THEN '05'
+			WHEN LEFT(Fecha, 3) = 'Jun' THEN '06'
+			WHEN LEFT(Fecha, 3) = 'Jul' THEN '07'
+			WHEN LEFT(Fecha, 3) = 'Ago' THEN '08'
+			WHEN LEFT(Fecha, 3) = 'Sep' THEN '09'
+			WHEN LEFT(Fecha, 3) = 'Oct' THEN '10'
+			WHEN LEFT(Fecha, 3) = 'Nov' THEN '11'
+			WHEN LEFT(Fecha, 3) = 'Dic' THEN '12'
 		END 
 		+ '-' + 
 		RIGHT(Fechas, 4)
