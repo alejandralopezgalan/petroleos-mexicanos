@@ -57,10 +57,10 @@ A brief description of each dataset is provided below. Most of the data is recor
 | HistoricoPreciosExpendios_2023data.csv | Daily retail prices of petroleum products by authorised sellers for the year 2023. | 
 | HistoricoPreciosExpendios_2024data.csv | Daily retail prices of petroleum products by authorised sellers for the year 2024. | 
 | HistoricoPreciosExpendios_2025data.csv | Daily retail prices of petroleum products by authorised sellers for the year 2025.| 
-| ImportacionesGasLicuadoPropano<br>ButanoPuntoInternacion_data | Import volumes of liquefied gas, propane, and butane by point of entry, measured in thousands of barrels per day.| 
+| ImportacionesGasLicuadoPropano<br>ButanoPuntoInternacion_data.csv | Import volumes of liquefied gas, propane, and butane by point of entry, measured in thousands of barrels per day.| 
 | PerforacionPozosPorRegion_data.csv` | Number of oil wells drilled, broken down by region.| 
-| ProduccionPetroleoCrudoPorActivosRegion_data.csv | Crude oil production by operational region, measured in thousands of barrels per day.| 
-| ProduccionPetroleoCrudoPorEntidadFederativa_data.csv |  Crude oil production by state, measured in thousands of barrels per day.| 
+| ProduccionPetroleoCrudo<br>PorActivosRegion_data.csv | Crude oil production by operational region, measured in thousands of barrels per day.| 
+| ProduccionPetroleoCrudoPor<br>EntidadFederativa_data.csv |  Crude oil production by state, measured in thousands of barrels per day.| 
 | ValorComercioIntTipoDe<br>HidrocarburosSusDerivados_data.csv | Monetary value of imports and exports of hydrocarbons and their derivatives, reported in millions of US dollars.| 
 | ValorExportacionesPetroleo<br>CrudoPorDestinoGeografic_data.csv | Export value of crude oil by geographic destination, measured in millions of US dollars.| 
 | VolumenImportacionPorTipoPetroliferos_data.csv | Import volume of specific petroleum products, measured in thousands of barrels per day.| 
