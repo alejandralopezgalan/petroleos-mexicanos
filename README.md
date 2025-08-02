@@ -81,7 +81,7 @@ In the initial data exploration, I found that in all the datasets were in horizo
 
 ![view_originaldata](assets/img/project4_1originaldata.png)
 
-![traspose](assets/img/project4_2traspose.png)
+![transpose](assets/img/)
 
 **2. Removing columns and replacing No Data (N/D) with zeros**  
 The resulting table was copied into a new sheet to start the data cleaning steps. First, some columns had zeros o missing values; however, these were not originally missing data, rather the result of trasposing the table. These columns were removed.
@@ -90,42 +90,33 @@ In other cases the original table had N/D in some observations, which mean that 
 ![nd](assets/img/project4_3replaceND.png)
 
 **3. Removing columns with only duplicated values**  
-Using Conditional Formatting in Excel, the cells with duplicated values were highlighted. In cases were all observations were highlited as duplicates, the columns were removed.
+Using Conditional Formatting in Excel, the cells with duplicated values were highlighted. In cases were all observations were highlited as duplicates, the columns were removed. Additionally, the columns were renamed to facilite subsequent analysis.
 ![duplicates](assets/img/project4_4duplicates.png)
 
-All these changes were saved in Excel files separated from the original data.
-
-**4. Exporting the final table into a new CSV file**  
-Finally, the table was copied into a new workbook and then exported as a CSV file to be used for the data analysis in SQL. The name of the files were shortened for an easier selection of the datasets to be imported into SQL Server.
-
-| Original File | Excel file with Data Cleaning Operations  | CSV file used for SQL |
-| :--- | :--- |  :--- |
-| `ComercioExteriorGasNaturalImportacionExportacion-PMXE1C12.csv` | ESENER_05_ComercioExteriorGasNaturalImportacionExportacion-PMXE1C12_EXCEL.xlsx | ComercioExteriorGasNatural.csv |
-| `ElaboracionProductosPetroliferos-PMXD1C01.csv` | SENER_05_ElaboracionProductosPetroliferos-PMXD1C01_EXCEL.xlsx  | ElaboracionProductosPetroliferos.csv | 
-| `ElaboracionProductosPetroquimicosDerivadosMetano-PMXD2C01.csv` | SENER_05_ElaboracionProductosPetroquimicosDerivadosMetano-PMXD2C01_EXCEL.xlsx | .csv | 
-| `ImportacionesGasLicuadoPropanoButanoPuntoInternacion-PMXE2C10` | SENER_05_ImportacionesGasLicuadoPropanoButanoPuntoInternacion-PMXE2C12_EXCEL.xlsx | .csv |
-| `SENER_05_PerforacionPozosPorRegion-PMXAC02_data.csv` | SENER_05_PerforacionPozosPorRegion-PMXAC02_EXCEL.xlsx | .csv |
-| `SENER_05_ProduccionPetroleoCrudoPorActivosRegion-PMXB1C05_data.csv` | SENER_05_ProduccionPetroleoCrudoPorActivosRegion-PMXB1C05_EXCEL.xlsx | .csv |
-| `SENER_05_ProduccionPetroleoCrudoPorEntidadFederativa-PMXB1C02_data.csv` | SENER_05_ProduccionPetroleoCrudoPorEntidadFederativa-PMXB1C02_EXCEL.xlsx | .csv |
-| `SENER_05_ValorComercioIntTipoDeHidrocarburosSusDerivados-PMXF4C02_data.csv` | SENER_05_ValorComercioIntTipoDeHidrocarburosSusDerivados-PMXF4C02_EXCEL.xlsx | .csv |
-| `SENER_05_ValorExportacionesPetroleoCrudoPorDestinoGeografico-PMXF1C02_data.csv` | SENER_05_ValorExportacionesPetroleoCrudoPorDestinoGeografico-PMXF1C02_EXCEL.xlsx | .csv | 
-| `SENER_05_VolumenImportacionPorTipoPetroliferos-PMXE2C15_data.csv` | SENER_05_VolumenImportacionPorTipoPetroliferos-PMXE2C15_EXCEL.xlsx | .csv | 
-| `SENER_05_VolumenVentasPorTipoPetroliferos-PMXE2C01_data.csv` | SENER_05_VolumenVentasPorTipoPetroliferos-PMXE2C01_EXCEL.xlsx | .csv | 
-| `Historico_Precios_Expendios_2023.csv` | Historico_Precios_Expendios_2023EXCEL.xlsx | .csv |
-| `Historico_Precios_Expendios_2024.csv` | Historico_Precios_Expendios_2024EXCEL.xlsx | .csv | 
-| `Historico_Precios_Expendios_2025.csv` | Historico_Precios_Expendios_2025EXCEL.xlsx | .csv | 
-
-
-The data was imported into a new Excel woorkbook and exported as a CSV file to be used in SQL.
-
-
-there was a Date column with values like ene-05, Feb-05, Mar-05, abr-05. When converting them to a Date format in Excel, some cells were recognised correctly, but others were not. After reviewing the data, I realised that these values were monthly dates. To ensure consistency and prevent errors, I turned to the EDATE function in Excel.
+**4.Date format** 
+There was a Date column with values like ene-05, Feb-05, Mar-05, abr-05. When converting them to a Date format in Excel, some cells were recognised correctly, but others were not. After reviewing the data, I realised that these values were monthly dates. To ensure consistency and prevent errors, I turned to the EDATE function in Excel.
 
 Here’s how it works:
 `EDATE(start_date, months)` shifts a date forward or backwards by a specified number of months. Since I needed all dates to follow a consistent format, such as 01/01/2010, 01/02/2010, 01/03/2010, I applied the formula:
 `=EDATE(A2, 1)`
 
-This helped standardise the datasets while adding one month to each value. I applied this transformation to the following datasets: `SENER_05_ComercioExteriorGasNaturalImportacionExportacion-PMXE1C12_data.csv`, `SENER_05_ElaboracionProductosPetroliferos-PMXD1C01_data.csv`, `SENER_05_ElaboracionProductosPetroquimicosDerivadosMetano-PMXD2C01.csv`, `SENER_05_ImportacionesGasLicuadoPropanoButanoPuntoInternacion-PMXE2C12`, `SENER_05_PerforacionPozosPorRegion-PMXAC02.csv`, `SENER_05_ProduccionPetroleoCrudoPorActivosRegion-PMXB1C05.csv`, `SENER_05_ProduccionPetroleoCrudoPorEntidadFederativa-PMXB1C02`, `SENER_05_ValorComercioIntTipoDeHidrocarburosSusDerivados-PMXF4C02.csv`, `SENER_05_ValorExportacionesPetroleoCrudoPorDestinoGeografico-PMXF1C02.csv`, `SENER_05_VolumenImportacionPorTipoPetroliferos-PMXE2C15.csv`, `SENER_05_VolumenVentasPorTipoPetroliferos-PMXE2C01.csv`. 
+This helped standardise the datasets while adding one month to each value. All these changes were saved in Excel files separated from the original data.
+
+**5. Exporting the final table into a new CSV file**  
+Finally, the clean dataset was copied into a new workbook and then exported as a CSV file to be used for the data analysis in SQL. 
+
+| Original File | Excel file with Data Cleaning Operations  | CSV file used for SQL |
+| :--- | :--- |  :--- |
+| `ComercioExteriorGasNatural`<br>`ImportacionExportacion_data.csv` | `ComercioExteriorGasNatural`<br>`ImportacionExportacion_Excel.xlsx` | `ComercioExteriorGasNatural`<br>`ImportacionExportacion.csv`|
+| `ElaboracionProductos`<br>`Petroliferos_data.csv` | `ElaboracionProductos`<br>`Petroliferos_Excel.xlsx`| `ElaboracionProductos`<br>`Petroliferos.csv` |
+| `ElaboracionProductosPetroquimicos`<br>`DerivadosMetano_data.csv` | `ElaboracionProductosPetroquimicos`<br>`DerivadosMetano_Excel.xlsx`| `ElaboracionProductosPetroquimicos`<br>`DerivadosMetano.csv` |
+| `ImportacionesGasLicuadoPropano`<br>`ButanoPuntoInternacion_data.csv` | `ImportacionesGasLicuadoPropano`<br>`ButanoPuntoInternacion_Excel.xlsx`| `ImportacionesGasLicuadoPropano`<br>`ButanoPuntoInternacion.csv`
+| `PerforacionPozosPorRegion_data.csv` | `PerforacionPozosPorRegion_data.csv`| `PerforacionPozosPorRegion.csv`|
+| `ProduccionPetroleoCrudo`<br>`PorActivosRegion_data.csv` | `ProduccionPetroleoCrudo`<br>`PorActivosRegion_Excel.xlsx` | `ProduccionPetroleoCrudo`<br>`PorActivosRegion.csv`|
+| `ValorComercioIntTipoDe`<br>`HidrocarburosSusDerivados_data.csv` | `ValorComercioIntTipoDe`<br>`HidrocarburosSusDerivados_Excel.xlsx` | `ValorComercioIntTipoDe`<br>`HidrocarburosSusDerivados.csv`|
+| `ValorExportacionesPetroleo`<br>`CrudoPorDestinoGeografic_data.csv` | `ValorExportacionesPetroleo`<br>`CrudoPorDestinoGeografic_Excel.xlsx` | `ValorExportacionesPetroleo`<br>`CrudoPorDestinoGeografic.csv` |
+| `VolumenImportacionPorTipo`<br>`Petroliferos_data.csv` | `VolumenImportacionPorTipo`<br>`Petroliferos_Excel.xlsx` | `VolumenImportacionPorTipo`<br>`Petroliferos.csv` |
+| `VolumenVentasPorTipo`<br>`Petroliferos_data.csv` | `VolumenVentasPorTipo`<br>`Petroliferos_Excel.xlsx` | `VolumenVentasPorTipo`<br>`Petroliferos.csv` |
 
 #### SQL
 In Microsoft SQL Server Management Studio I created the database `pemex_db`, then I imported the file `ComercioExteriorGasNatural.csv` into the database. The first data transformation was to standarise the Dates. This file contained Dates in format "Ene/2010, Feb/2010, Mar/2010", etc. Therefore in SQL we used a conditional expression to create a new variable and transform the date to a 'dd-MM-yyyy' format.
