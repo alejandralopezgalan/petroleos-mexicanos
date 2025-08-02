@@ -81,7 +81,7 @@ In the initial data exploration, I found that in all the datasets were in horizo
 
 ![view_originaldata](assets/img/project4_1originaldata.png)
 
-![transpose](assets/img/)
+![transpose](assets/img/project4_2transpose.png)
 
 **2. Removing columns and replacing No Data (N/D) with zeros**  
 The resulting table was copied into a new sheet to start the data cleaning steps. First, some columns had zeros o missing values; however, these were not originally missing data, rather the result of trasposing the table. These columns were removed.
@@ -101,6 +101,7 @@ Here’s how it works:
 `=EDATE(A2, 1)`
 
 This helped standardise the datasets while adding one month to each value. All these changes were saved in Excel files separated from the original data.
+![dates](assets/img/project4_5date.png)
 
 **5. Exporting the final table into a new CSV file**  
 Finally, the clean dataset was copied into a new workbook and then exported as a CSV file to be used for the data analysis in SQL. 
