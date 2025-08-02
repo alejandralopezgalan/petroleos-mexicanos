@@ -93,7 +93,7 @@ In other cases the original table had N/D in some observations, which mean that 
 Using Conditional Formatting in Excel, the cells with duplicated values were highlighted. In cases were all observations were highlited as duplicates, the columns were removed. Additionally, the columns were renamed to facilite subsequent analysis.
 ![duplicates](assets/img/project4_4duplicates.png)
 
-**4. Date** 
+**4. Date**  
 There was a Date column with values like ene-05, Feb-05, Mar-05, abr-05. When converting them to a Date format in Excel, some cells were recognised correctly, but others were not. After reviewing the data, I realised that these values were monthly dates. To ensure consistency and prevent errors, I turned to the EDATE function in Excel.
 
 Here’s how it works:
