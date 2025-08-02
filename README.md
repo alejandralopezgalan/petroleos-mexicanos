@@ -51,7 +51,7 @@ A brief description of each dataset is provided below. Most of the data is recor
 
 | File | Description | 
 | :--- | :--- |
-| `ComercioExteriorGasNatural<br>ImportacionExportacion_data.csv` | External trade of natural gas, reported by volume (millions of cubic feet per day) and value (millions of US dollars).| 
+| `ComercioExteriorGas<br>NaturalImportacionExportacion<br>_data.csv` | External trade of natural gas, reported by volume (millions of cubic feet per day) and value (millions of US dollars).| 
 | `ElaboracionProductosPetroliferos_data.csv` | Production of petroleum products by category, measured in thousands of barrels per day.| 
 | `ElaboracionProductosPetroquimicosDerivadosMetano_data.csv` | Production of petrochemical products derived from methane, measured in thousands of tons per day.| 
 | `ImportacionesGasLicuadoPropanoButanoPuntoInternacion_data` | Import volumes of liquefied gas, propane, and butane by point of entry, measured in thousands of barrels per day.| 
